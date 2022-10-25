@@ -1,0 +1,412 @@
+* {
+    box-sizing: border-box;
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+@font-face {
+    font-family:grotesk ;
+    src: url(./fonts/SpaceGrotesk-Medium.ttf);
+}
+
+body {
+    max-width: 1440px;
+}
+
+.container {
+    max-width: 1440px;
+}
+
+.background img:nth-of-type(2) {
+    display: none;
+}
+
+.cards {
+    position: absolute;
+    top: 200px;
+    left: 250px;
+}
+
+.front_card {
+    margin-left: -100px;
+    margin-bottom: 30px;
+}
+
+.front_card_details #card_logo {
+    position: absolute;
+    top: 30px;
+    left: -70px;
+}
+
+
+.front_card_details h1 {
+    color:  hsl(0, 0%, 100%);
+    position: absolute;
+    top: 130px;
+    left: -70px;
+    right: 0;
+    font-family: grotesk;
+    letter-spacing: 2px;
+    font-weight: 100;
+}
+
+#namebox {
+    display: inline-flex;
+    position: absolute;
+    top: 200px;
+    left: -70px;
+    font-family: grotesk;
+    color: hsl(0, 0%, 100%);
+    letter-spacing: 2px;
+}
+
+.date {
+    display: inline-flex;
+    position: absolute;
+    top: 200px;
+    right: 120px;
+    font-family: grotesk;
+    color: hsl(0, 0%, 100%);
+    letter-spacing: 2px;
+}
+
+.back_card p {
+    font-family: grotesk;
+    letter-spacing: 2px;
+    color: hsl(0, 0%, 100%);
+    position: absolute;
+    top: 390px;
+    right: 60px
+}
+
+
+
+@media (max-width:375px) {
+    .container {
+        max-width: 375px;
+    }
+
+    .background img:nth-of-type(1) {
+        display:none ;
+    }
+
+    .background img:nth-of-type(2) {
+        display:block;
+    }
+
+    .cards {
+        position: absolute;
+        top: 30px;
+        left: 13px;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .front_card {
+        z-index: 1;
+        grid-row:2 ;
+        margin-left: 0px;
+        margin-top: -73px;
+    }
+
+    .front_card img, .back_card img {
+        width: 300px;
+        height: 160px;
+    }
+
+    .front_card_details #card_logo {
+        position: absolute;
+        top: 110px;
+        left: 20px;
+        width: 50px;
+        height: 30px;
+    }
+
+    .front_card_details h1 {
+        top: 170px;
+        left: 20px;
+        right: 0;
+        font-size: 20px;
+    }
+    
+    #namebox {
+        top: 215px;
+        left: 20px;
+        font-size: 12px;
+    }
+     
+    .date {
+        top: 215px;
+        right: 75px;
+        font-size: 12px;
+    }
+
+
+    .back_card {
+        grid-row: 1;
+        margin-top: 0px;
+        margin-left: 50px;
+        margin-bottom: 0px;
+    }
+
+    .back_card p {
+        top: 70px;
+        right: 40px;
+        font-size:12px;
+    }
+
+}
+
+
+
+form {
+    display: block;
+    position: absolute;
+    top: 250px;
+    right:200px;
+    
+}
+
+@media (max-width:375px) {
+    form {
+        top: 280px;
+        left: 20px;
+        right: 0;
+        margin: 0;
+    }
+}
+
+.inputcontrol {
+    margin-top: 30px;
+}
+
+.inputcontrol label {
+    color: hsl(278, 68%, 11%);
+    font-family: grotesk;
+    font-variant: small-caps;
+    font-size: 16px;
+}
+
+#namefield {
+    color: hsl(279, 6%, 55%);
+    width: 340px;
+    height: 40px;
+    border: 1px solid  hsl(270, 3%, 87%);
+    border-radius: 7px;
+    text-indent: 10px;
+    margin-top: 10px;
+    font-family: grotesk;
+}
+
+#namefield:focus {
+    outline: 0;
+    border-color: hsl(278, 94%, 30%);
+}
+
+
+
+#cardnumber {
+    color: hsl(279, 6%, 55%);
+    width: 340px;
+    height: 40px;
+    border: 1px solid  hsl(270, 3%, 87%);
+    border-radius: 7px;
+    text-indent: 10px;
+    margin-top: 10px;
+}
+
+#cardnumber:focus {
+    outline: 0;
+    border-color: hsl(278, 94%, 30%);
+}
+
+#textbox {
+    width: 200px;
+    height:200px;
+    background: blue;
+    color: red;
+}
+
+.error {
+    color:  hsl(0, 100%, 66%) ;
+    font-family: grotesk;
+    letter-spacing: 2px;
+    font-size: 12px;
+}
+
+.inputcontrol input.success input {
+    outline: 1px;
+    border: 1px solid hsl(278, 94%, 30%);
+}
+
+.inputcontrol input.error input {
+   border: 1px solid hsl(0, 100%, 66%); 
+}
+
+
+
+/*card date and cvv*/
+.flex_labels {
+    margin-top: 30px;
+    color:  hsl(278, 68%, 11%);
+    font-family: grotesk;
+    font-variant: small-caps;
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+.flex_labels label:first-of-type {
+    margin-right: 35px;
+}
+
+.flex_inputs {
+    display: flex;
+    margin-bottom: 30px;
+    margin-top: -30px;
+}
+
+
+#monthfield {
+    color: hsl(279, 6%, 55%);
+    width: 80px;
+    height: 40px;
+    border: 1px solid  hsl(270, 3%, 87%);
+    border-radius: 7px;
+    text-indent: 10px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-right: 5px;
+    font-family: grotesk;
+}
+
+#monthfield:focus {
+    outline: 0;
+    border-color: hsl(278, 94%, 30%);
+}
+
+
+
+#yearfield {
+    color: hsl(279, 6%, 55%);
+    width: 80px;
+    height: 40px;
+    border: 1px solid  hsl(270, 3%, 87%);
+    border-radius: 7px;
+    text-indent: 10px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    margin-right: 20px;
+    font-family: grotesk;
+}
+
+#yearfield:focus {
+    outline: 0;
+    border-color: hsl(278, 94%, 30%);
+}
+
+#cvvfield {
+    color: hsl(279, 6%, 55%);
+    width: 135px;
+    height: 40px;
+    border: 1px solid  hsl(270, 3%, 87%);
+    border-radius: 7px;
+    text-indent: 10px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    font-family: grotesk;
+}
+
+#cvvfield:focus {
+    outline: 0;
+    border-color: hsl(278, 94%, 30%);
+}
+
+
+
+button {
+    background:  hsl(278, 68%, 11%);
+    color:  hsl(0, 0%, 100%);
+    width: 350px;
+    height: 45px;
+    border-radius: 7px;
+    text-indent: 10px;
+    font-family: grotesk;
+    letter-spacing: 2px;
+    font-size: 16px;
+    border: 0;
+}
+
+.error {
+    color:  hsl(0, 100%, 66%) ;
+    font-family: grotesk;
+    letter-spacing: 2px;
+    font-size: 12px;
+}
+
+.inputcontrol.success input {
+    border-color: hsl(278, 94%, 30%);
+}
+
+.inputcontrol.error input {
+   border-color: hsl(0, 100%, 66%); 
+}
+
+
+
+
+
+
+/* complete state*/
+
+#success {
+    display:none;
+    position: absolute;
+    top: -150px;
+    right: 0;
+    left: 0px;
+    background:hsl(0, 0%, 100%);
+    width: 600px;
+    height: 600px;
+    text-align: center;
+}
+
+.center_content {
+    margin: 250px 130px auto auto;
+}
+
+.center_content h1 {
+    font-family: grotesk;
+    margin: 20px 0 ;
+    color: hsl(278, 68%, 11%);
+}
+
+.center_content p {
+    font-family: grotesk;
+    font-size: 18px;
+    color: hsl(279, 6%, 55%);
+}
+
+.center_content button {
+    margin-top: 20px;
+}
+
+@media (max-width:375px) {
+    #success {
+        display: none;
+        position: absolute;
+        top: 250px;
+        left: 0px;
+        background:hsl(0, 0%, 100%);
+        width: 375px;
+        height: 600px;
+        text-align: center;
+    }
+
+    .center_content {
+        margin: 80px auto auto auto;
+    }
+}
+
+
+

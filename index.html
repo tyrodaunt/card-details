@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <title>Frontend Mentor | Interactive card details form</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="background">
+            <img src="./images/bg-main-desktop.png" alt="destop main background">
+            <img src="./images/bg-main-mobile.png" alt="mobile main background">
+        </div>
+        <div class="cards">
+            <div class="front_card">
+                <img src="./images/bg-card-front.png" alt="card_front">
+
+                <div class="front_card_details">
+                    <img id="card_logo" src="./images/card-logo.svg" alt="card logo">
+                    <h1 id="numberbox"> 0000 0000 0000 0000 </h1>
+                    <p id="namebox"> Jane Appleseed </p>
+                    <div class="date">
+                        <p id="monthbox"> 00 </p>
+                                        / 
+                        <p id="yearbox"> 00 </p>
+                    </div>
+                </div> 
+            </div>
+            <div class="back_card">
+                <img src="./images/bg-card-back.png" alt="card_back">
+                <p id="cvvbox">000</p>
+            </div>  
+        </div>
+
+        <form id="form" action="post">
+
+            <div class="inputcontrol">
+                <label for="namefield"> Cardholder Name </label> <br>
+                <input id="namefield" type="text" placeholder="e.g. Jane Appleseed" value="">
+                <div class="error"></div>
+            </div>
+    
+           <div class="inputcontrol">
+            <label for="cardnumber"> Card Number </label> <br>
+            <input id="cardnumber" type="text" placeholder=" e.g. 1234 5678 9123 0000" value="" maxlength="16">
+            <div class="error"></div>
+           </div>       
+                <div class="flex_labels"> 
+                    <label for="MM&YY"> Exp. Date (MM/YY) </label>
+                    <label for="cvv"> CVC </label> 
+                </div>
+                <div class="flex_inputs">
+                    <div class="inputcontrol">
+                        <input id="monthfield" type="text" placeholder="MM" value="" maxlength="2" onkeypress="return restrictAlphabets(event)">
+                        <input id="yearfield" type="text" placeholder="YY" value="" maxlength="2" onkeypress="return restrictAlphabets(event)">
+                        <div class="error"></div>            
+                    </div>
+                    <div class="inputcontrol">
+                        <input id="cvvfield" type="text" placeholder=" e.g. 123" value="" maxlength="3" onkeypress="return restrictAlphabets(event)">
+                        <div class="error"></div>
+                    </div>
+                </div>
+                
+            <div id="success"> 
+                <div class="center_content">
+                    <img src="./images/icon-complete.svg" alt="">
+                    <h1> Thank you! </h1>
+                    <p> We've added your card details </p>
+                    <a href="./index.html"> <button type="submit"> Continue </button> </a>
+                </div>
+            </div> 
+    
+           <button id="button"  type="submit"> Confirm </button>
+        </form>
+
+       
+        
+
+
+    </div>
+
+
+
+
+
+<script src="./script.js"></script>    
+</body>
+</html>
