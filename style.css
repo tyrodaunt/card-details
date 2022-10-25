@@ -16,6 +16,8 @@ body {
 
 .container {
     max-width: 1440px;
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
 }
 
 .background img:nth-of-type(2) {
